@@ -3,15 +3,18 @@ var express = require('express');
 var router = express.Router();
 
 // Controllers
-var picturesController = require('../controllers/pictures');
+var picturesController = require('../controllers/picture');
 
 // Routes
 router.route('/pictures')
-	.get(picturesController.getPicture)
-	.post(picturesController.postPicture);
+	.get(picturesController.getPictures)
+	.post(picturesController.postPictures);
 
 router.route('/pictures/:picture_id')
 	.put(picturesController.putPicture)
-	.delete(picturesController.deletePicture);`
+	.delete(picturesController.deletePicture);
+
+router.route('/picture')
+  .post(picturesController.getRandomPictureByTags);
 
 module.exports = router;
