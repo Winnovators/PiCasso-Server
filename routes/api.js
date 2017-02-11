@@ -12,6 +12,6 @@ router.route('/pictures')
 
 router.route('/pictures/:picture_id')
 	.put(picturesController.putPicture)
-	.delete(picturesController.deletePicture);`
-
+	.delete(picturesController.deletePicture);
+  
 module.exports = router;
