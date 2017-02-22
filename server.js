@@ -20,6 +20,9 @@ app.use('/api', require('./routes/api'));
 app.post('/upload', upload.single('photo'), function(req, res) {
   console.log(req.body) // form fields
   console.log(req.file) // form files
+
+  // TODO: call python script and add image to database with corresponding tag
+
   res.status(204).end()
 });
 
